@@ -31,7 +31,12 @@ c : 모든 예외를 저장하는 Exception은 마지막에 처리해야 한다.
 # 8
 try-catch 문을 추가한다.
 ```java
-try
+try {
+	input = new Scanner(System.in).nextInt();
+} catch(Exception e) {
+	System.out.println("다시 입력");
+	continue;
+}
 ```
 
 # 9
