@@ -1,6 +1,6 @@
 # 1
 ```java
-class Thread1 implements Runnable {
+class RunningThread implements Runnable {
   public void run() {
     for(int i=0; i < 300; i++) {
       System.out.print('-');
@@ -43,3 +43,13 @@ d
 5
 (꽝 예외)
 ```
+
+# 7
+```java
+th1.interrupt(); 추가하기
+```
+
+# 8
+
+# 9
+try-catch문에 interrupt(); 삽입하기
