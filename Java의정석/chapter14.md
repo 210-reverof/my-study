@@ -84,3 +84,15 @@ strStream.map(String::length).sorted(Comparator.reverseOrder()).limit(1).forEach
 ```java
 new Random().ints(1,46).distinct().limit(6).sorted().forEach(System.out::println);
 ```
+
+# 7
+
+```java
+die.flatMap(i-> Stream.of(1,2,3,4,5,6).map(i2 -> new int[]{ i, i2 })).filter(iArr-> iArr[0]+iArr[1]==6).forEach(iArr -> System.out.println(Arrays.toString(iArr)));
+```
+
+# 8
+
+```java
+Map<Boolean, Map<Boolean, Long>> failedStuBySex = Stream.of(stuArr).collect(partitioningBy(Student::isMale, partitioningBy(s -> s.getScore() < 150, counting())));
+```
